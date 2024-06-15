@@ -7,22 +7,23 @@ services:
       - _JAVA_OPTIONS=-Xmx512m -Xms256m
       - SPRING_PROFILES_ACTIVE=prod,api-docs
       - MANAGEMENT_METRICS_EXPORT_PROMETHEUS_ENABLED=true
-      - SPRING_DATASOURCE_URL=jdbc:postgresql://sycicd-postgresql:5432/SyCiCD
-      - SPRING_LIQUIBASE_URL=jdbc:postgresql://sycicd-postgresql:5432/SyCiCD
+      - SPRING_DATASOURCE_URL=jdbc:postgresql://sycicd-postgresql:5432/sycicd
+      - SPRING_LIQUIBASE_URL=jdbc:postgresql://sycicd-postgresql:5432/sycicd
       - JHIPSTER_SLEEP=30 # gives time for other services to boot before the application
     # If you want to expose these ports outside your dev PC,
     # remove the "127.0.0.1:" prefix
     ports:
-      - 127.0.0.1:8080:8080
+      - 8080:8080
   sycicd-postgresql:
     image: postgres:14.5
     # volumes:
     #   - ~/volumes/jhipster/SyCiCD/postgresql/:/var/lib/postgresql/data/
     environment:
-      - POSTGRES_USER=SyCiCD
-      - POSTGRES_PASSWORD=
+      - POSTGRES_USER=postgres
+      - POSTGRES_PASSWORD=12345
+      - POSTGRES_DB=sycicd
       - POSTGRES_HOST_AUTH_METHOD=trust
     # If you want to expose these ports outside your dev PC,
     # remove the "127.0.0.1:" prefix
     ports:
-      - 127.0.0.1:5432:5432
+      - 5432:5432

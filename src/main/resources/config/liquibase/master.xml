@@ -11,7 +11,22 @@
     <property name="datetimeType" value="datetime" dbms="postgresql"/>
 
     <include file="config/liquibase/changelog/00000000000000_initial_schema.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20240615201322_added_entity_Category.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20240615201323_added_entity_Book.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20240615201324_added_entity_Author.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20240615201325_added_entity_WaitList.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20240615201326_added_entity_BookCopy.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20240615201327_added_entity_Publisher.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20240615201328_added_entity_CheckOut.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20240615201329_added_entity_PatronAccount.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20240615201330_added_entity_Notification.xml" relativeToChangelogFile="false"/>
     <!-- jhipster-needle-liquibase-add-changelog - JHipster will add liquibase changelogs here -->
+    <include file="config/liquibase/changelog/20240615201323_added_entity_constraints_Book.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20240615201325_added_entity_constraints_WaitList.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20240615201326_added_entity_constraints_BookCopy.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20240615201328_added_entity_constraints_CheckOut.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20240615201329_added_entity_constraints_PatronAccount.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20240615201330_added_entity_constraints_Notification.xml" relativeToChangelogFile="false"/>
     <!-- jhipster-needle-liquibase-add-constraints-changelog - JHipster will add liquibase constraints changelogs here -->
     <!-- jhipster-needle-liquibase-add-incremental-changelog - JHipster will add incremental liquibase changelogs here -->
 </databaseChangeLog>
